@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <h:head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>
+        
+        <title>Laboratorio 1 - Análisis y Diseño de Sistemas 2</title>
+    </h:head>
+    <h:body>
+        <div>
+            <h:form id="frm" style="text-align: center;">
+                <h1>Operaciones</h1>
+                <br/>
+                Dato 1: <h:inputText id="dato1" value="#{operaciones.dato1}" />
+                <br/>
+                <br/>
+                Dato 2: <h:inputText id="dato2" value="#{operaciones.dato2}"/>
+                <br/>
+                <br/>
+                Resultado: <h:outputText id="res" value="#{operaciones.res}"/>
+                <br/>
+                <br/>
+                <h:commandButton id="suma" value="Sumar" action="#{operaciones.suma()}"/>&nbsp; 
+                <h:commandButton id="Restar" value="Restar" action="#{operaciones.resta()}"/>&nbsp; 
+                <h:commandButton id="Multiplicar" value="Multiplicar" action="#{operaciones.multiplicacion()}"/>&nbsp; 
+                <h:commandButton id="Dividir" value="Dividir" action="#{operaciones.division()}"/>
+            </h:form>
+            
+        </div>
+        
+    </h:body>
+</html>
+
