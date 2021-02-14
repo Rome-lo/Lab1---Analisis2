@@ -1,27 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="com.laboratorio_labo1_ADS2_war_1.0-SNAPSHOT">
-
-    <!--
-    see examples at http://testng.org/doc/documentation-main.html#testng-xml
-
-    <suite-files>
-        <suite-file path="./junit-suite.xml" />
-    </suite-files>
-
-    <test name="TimeOut">
+    <test name="UnitTest y CrossBrowserTest">
         <classes>
-            <class name="test.timeout.TimeOutTest" />
-            <class name="test.timeout.TimeOutFromXmlTest"/>
-            <class name="test.timeout.TimeOutThreadLocalSampleTest"/>
+            <class name="com.laboratorio.test.TestClassOne"/>
         </classes>
     </test>
-    -->
-    
-    <test name="TestOne">
-        <classes>
-            <class name="com.analisis.test.TestClassOne"/>
-        </classes>
-    </test>
-
 </suite>

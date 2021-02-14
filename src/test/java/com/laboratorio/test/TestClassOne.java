@@ -8,14 +8,27 @@ package com.laboratorio.test;
 import com.laboratorio.beans.Operaciones;
 import java.util.HashSet;
 import java.util.Set;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
 import static org.testng.Assert.assertEquals;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Parameters;
 
 /**
  *
  * @author romeo
  */
 public class TestClassOne {
+    WebDriver driver1, driver2, driver3;
+    WebDriverWait wait;
+    
     public void TestClassOne(){
         
     }
@@ -59,4 +72,82 @@ public class TestClassOne {
         Double resultado = op.getRes();
         assertEquals(resultado,Double.parseDouble("10"), 0.001,"Error en test Division()");
     }
+
+    @Test
+    public void prueba1(){
+        try {    
+
+            
+            System.out.println("Test en Firefox");
+            System.setProperty("webdriver.gecko.driver", "/home/romeo/NetBeansProjects/WEBDRIVERS/geckodriver");
+            driver1 = new FirefoxDriver();
+            driver1.get("http://localhost:8080/labo1_ADS2/");
+            System.out.println("################### " + driver1.getTitle() + " ##############################");
+            WebElement dato1_A = driver1.findElement(By.id("frm:dato1"));
+            dato1_A.sendKeys("10");
+            WebElement dato2_A = driver1.findElement(By.id("frm:dato2"));
+            dato2_A.sendKeys("20");
+            WebElement btn_A = driver1.findElement(By.id("frm:suma"));
+            btn_A.click();
+
+            driver1.quit();
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+    }
+    @Test
+    public void prueba2(){
+        try {    
+
+            
+            System.out.println("Test en Chrome");
+            System.setProperty("webdriver.chrome.driver", "/home/romeo/NetBeansProjects/maven_selenium-master/resources/chromedriver");
+            driver2 = new ChromeDriver();         
+            driver2.get("http://localhost:8080/labo1_ADS2/");
+            System.out.println("################### " + driver2.getTitle() + " ##############################");
+            WebElement dato1_B = driver2.findElement(By.id("frm:dato1"));
+            dato1_B.sendKeys("10");
+            WebElement dato2_B = driver2.findElement(By.id("frm:dato2"));
+            dato2_B.sendKeys("20");
+            WebElement btn_B = driver2.findElement(By.id("frm:suma"));
+            btn_B.click();
+
+            driver2.quit();
+            
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+    }
+    
+    @Test
+    public void prueba3(){
+        try {    
+            System.out.println("Test en Opera");
+            System.setProperty("webdriver.opera.driver","/home/romeo/NetBeansProjects/WEBDRIVERS/operadriver");
+            driver3 = new OperaDriver();        
+            driver3.get("http://localhost:8080/labo1_ADS2/");
+            System.out.println("################### " + driver3.getTitle() + " ##############################");
+            WebElement dato1_C = driver3.findElement(By.id("frm:dato1"));
+            dato1_C.sendKeys("10");
+            WebElement dato2_C = driver3.findElement(By.id("frm:dato2"));
+            dato2_C.sendKeys("20");
+            WebElement btn_C = driver3.findElement(By.id("frm:suma"));
+            btn_C.click();
+            driver3.quit();
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+    }
+    
+    @AfterClass
+    public void tearDownClass() throws Exception {
+        /*
+        driver1.quit();
+        driver2.quit();
+        driver3.quit();*/
+        
+    }
+    
+    
+    
 }
