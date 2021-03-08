@@ -120,7 +120,7 @@ public class TestClassOne {
     }
     
     //@test
-    //prueba para build con jenkins
+    //prueba para build con 
     public void prueba3(){
         try {    
             System.out.println("Test en Opera");
