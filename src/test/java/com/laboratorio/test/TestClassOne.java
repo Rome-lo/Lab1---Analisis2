@@ -123,7 +123,8 @@ public class TestClassOne {
      
     
     
-    //prueba no 6
+    //prueba no 6 (nel)
+    //prueba no 7
     public void prueba3(){
         try {    
             System.out.println("Test en Opera");
