@@ -73,7 +73,7 @@ public class TestClassOne {
         assertEquals(resultado,Double.parseDouble("10"), 0.001,"Error en test Division()");
     }
 
-    //@Test
+    
     public void prueba1(){
         try {    
 
@@ -95,7 +95,7 @@ public class TestClassOne {
             System.out.println(e.toString());
         }
     }
-    //@Test
+    
     public void prueba2(){
         try {    
 
@@ -119,7 +119,7 @@ public class TestClassOne {
         }
     }
     
-    //@Test
+    
     public void prueba3(){
         try {    
             System.out.println("Test en Opera");
@@ -141,11 +141,7 @@ public class TestClassOne {
     
     @AfterClass
     public void tearDownClass() throws Exception {
-        /*
-        driver1.quit();
-        driver2.quit();
-        driver3.quit();*/
-        
+
     }
     
     
