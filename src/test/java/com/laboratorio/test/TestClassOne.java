@@ -40,7 +40,7 @@ public class TestClassOne {
         op.setDato2(Double.parseDouble("15"));
         op.suma();
         Double resultado = op.getRes();
-        assertEquals(resultado,Double.parseDouble("25"), 0.001,"Error en test Suma()");
+        assertEquals(resultado,Double.parseDouble("20"), 0.001,"Error en test Suma()");
     }
     @Test
     public void TestResta(){
