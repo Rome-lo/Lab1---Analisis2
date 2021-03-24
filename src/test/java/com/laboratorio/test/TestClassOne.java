@@ -50,7 +50,7 @@ public class TestClassOne {
         op.setDato2(Double.parseDouble("10"));
         op.resta();
         Double resultado = op.getRes();
-        assertEquals(resultado,Double.parseDouble("5"), 0.001,"Error en test Resta()");
+        assertEquals(resultado,Double.parseDouble("50"), 0.001,"Error en test Resta()");
     }
     @Test
     public void TestMulti(){
@@ -60,7 +60,7 @@ public class TestClassOne {
         op.setDato2(Double.parseDouble("10"));
         op.multiplicacion();
         Double resultado = op.getRes();
-        assertEquals(resultado,Double.parseDouble("150"), 0.001,"Error en test Multiplicacion()");
+        assertEquals(resultado,Double.parseDouble("15"), 0.001,"Error en test Multiplicacion()");
     }
     @Test
     public void TestDiv(){
@@ -70,7 +70,7 @@ public class TestClassOne {
         op.setDato2(Double.parseDouble("2"));
         op.division();
         Double resultado = op.getRes();
-        assertEquals(resultado,Double.parseDouble("10"), 0.001,"Error en test Division()");
+        assertEquals(resultado,Double.parseDouble("100"), 0.001,"Error en test Division()");
     }
 
     
