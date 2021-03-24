@@ -53,6 +53,7 @@ public class Operaciones implements Serializable{
     //prueba lab 3
     public void suma(){
         //prueba lab part 2
+        //prueba lab part 3
         this.res = this.dato1 + this.dato2;
     }
     public void resta(){
