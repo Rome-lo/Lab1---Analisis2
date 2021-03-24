@@ -34,7 +34,7 @@ public class TestClassOne {
     }
     @Test
     public void TestSuma(){
-        System.out.println("Ejecutando Test suma()");
+        System.out.println("Ejecutando test suma()");
         Operaciones op = new Operaciones();
         op.setDato1(Double.parseDouble("10"));
         op.setDato2(Double.parseDouble("15"));
